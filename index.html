@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game-Life</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Игра «Жизнь» (англ. Conway's Game of Life) — клеточный автомат</h1>
+    </div>
+    <div class="container">
+        <div class="settings">
+            <h2>Панель управления</h2>
+            <hr>
+            <div class="radio">
+                <span class="title">Режим заполнения:</span><br>
+                <input id="auto" type="radio" class="mode auto" name="mode" checked>
+                <label for="auto">авто</label>
+                <input id="manual" type="radio" class="mode manual" name="mode">
+                <label for="manual">ручной</label>
+            </div>
+            <hr>
+            <form name="tableparams">
+                <span class="title">Параметры сетки:</span><br>
+                <label for="rowcount">кол-во строк</label>
+                <input type="number" name="rowcount" id="rowcount" min="5" max="100" value="21"><br>
+                <label for="colcount">кол-во колонок</label>
+                <input type="number" name="colcount" id="colcount" min="5" max="100" value="39"><br>
+                <button type="submit" id="but">Создать</button>
+            </form>
+            <div class="condition">
+                <hr>
+                <span class="title">Условия:</span><br>
+                <label for="survive1">для выживания:</label><br>
+                <span class="surv">- меньше || равно</span>
+                <input type="number" name="life" id="survive1" min="0" max="8" value="2"><br>
+                <span class="surv">- больше || равно</span>
+                <input type="number" name="life" id="survive2" min="0" max="8" value="3"><br>
+                <label for="new">для рождения</label>
+                <input type="number" name="new" id="new" min='0' max="8" value="3"><br>
+            </div>
+            <hr>
+            <div class="speed">
+                <span class="title">Настройка скорости:</span><br>
+                <label for="interval">Интервал, мс</label>
+                <input type="number" name="repeat" id="interval" min="100" max="1000" step="100" required="required" value="100"><br>
+                <input type="range" name="range" id="int" min="100" max="1000" step="100" value="100"><br>
+                <button id="start">Пуск</button>
+            <button id="stop">Стоп</button>
+            </div>
+            <hr>
+            <div>
+                <p>СТАТИСТИКА:</p>
+                <p>Поколений: <span id="breed"></span></p>
+                <p><input type="checkbox" name="dead" id="dead">Погибших: <span id="fall"></span></p>
+                <p><input type="checkbox" name="borned" id="borned">Рожденных: <span id="born"></span></p>
+                <p>Выживание: <span id="stat"></span></p>
+            </div>
+            <hr>
+        </div>
+        <div id="grid"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

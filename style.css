@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: -webkit-radial-gradient(center, circle farthest-corner, rgba(255, 255, 255, 0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255, 255, 255, 0), rgba(255,255,255,0) 20%, rgba(255, 255, 255, 0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
+    background: -moz-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -moz-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -moz-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -moz-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
+    background: radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
+    -webkit-background-size: 100% 100%, 10px 10px, 10px 10px, 100% 100%;
+    -moz-background-size: 100% 100%, 10px 10px, 10px 10px, 100% 100%;
+    background-size: 100% 100%, 10px 10px, 10px 10px, 100% 100%;
+    background-repeat: repeat;
+    background-position: top center, 1px 1px, 0px 0px, top center;
+    font-family: 'Play', sans-serif;
+}
+
+h1 {
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    font-size: 25px;
+    margin: 0;
+}
+
+.header {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    /* width: 100%; */
+    justify-content: flex-start;
+}
+
+h2 {
+    color: #323235;
+    font-weight: lighter;
+    font-size: 20px;
+    margin: 0;
+}
+
+.settings {
+
+width: 225px;
+
+margin-left: 20px;
+
+flex: 0 0 200px;
+}
+
+.radio {
+    position: relative;
+    height: 50px;
+}
+
+input[type='radio'], .radio label {
+    position: absolute;
+    height: 18px;
+    top: 30px;
+}
+
+.radio #auto {
+    left: -15px;
+}
+
+.radio #manual {
+    left: 70px;
+}
+.radio label[for="auto"] {
+    left: 25px;
+}
+
+.radio label[for="manual"] {
+    left: 110px;
+}
+
+form {
+    display: inline-block;
+}
+
+table {
+    margin: 20px 10px;
+}
+
+td {
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    border: solid 1px gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px;
+    box-shadow: lightgray 1px 1px;
+}
+
+button {
+    width: 85px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(68,68,68);
+    text-decoration: none;
+    user-select: none;
+    padding: .2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.36);
+    border-radius: 2px;
+    background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all .2s ease 0s;
+}
+
+button:hover {
+    color: rgb(24,24,24);
+    border: 1px solid rgb(133, 133, 133);
+    background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+button:active {
+    color: rgb(51,51,51);
+    border: 1px solid rgb(204,204,204);
+    background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+    box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+
+input {
+    width: 50px;
+    font-size: 13px;
+    padding-left: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+input[type='checkbox'] {
+    width: 15px;
+    margin-right: 5px;
+}
+
+input[type='range'] {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+form button {
+    width: 100%;
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 114px;
+    margin-bottom: 10px;
+}
+
+label, p, form > span {
+    font-size: 15px;
+}
+
+label[for='survive1'] {
+    margin-bottom: 5px;
+}
+
+.surv {
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+#survive1 {
+    margin-left: 7px;
+}
+
+#survive2 {
+    margin-left: 9px;
+}
+
+#breed {
+    color: saddlebrown;
+}
+
+#fall {
+    color: darkred;
+}
+
+#born {
+    color: darkblue;
+}
+
+#stat {
+    color: #138058;
+}
+
+.born, .death, .empty, .life {
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+.empty {
+    /* background-color: white; */
+}
+
+.life {
+    background-image: url("img/Android-life-10_30x30.png");
+}
+
+.death {
+    background-image: url("img/Android-death_30x30.png");
+}
+
+.born {
+    background-image: url("img/Android-born-3_30x30.png");
+}
